@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Label layoutX="58.0" layoutY="32.0" text="PESCAO">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbPeces" layoutX="41.0" layoutY="100.0" opacity="0.45" prefWidth="150.0" promptText="Elije uno">
+         <effect>
+            <SepiaTone />
+         </effect>
+      </ComboBox>
+      <TextField fx:id="txtNacimiento" layoutX="212.0" layoutY="100.0">
+         <effect>
+            <SepiaTone />
+         </effect>
+      </TextField>
+      <Button layoutX="41.0" layoutY="136.0" mnemonicParsing="false" onAction="#procesar" prefHeight="25.0" prefWidth="415.0" text="Procesar" AnchorPane.rightAnchor="44.0">
+         <effect>
+            <SepiaTone />
+         </effect>
+      </Button>
+      <ListView fx:id="lista1" layoutX="58.0" layoutY="171.0" prefHeight="273.0" prefWidth="384.0" />
+      <Label layoutX="222.0" layoutY="71.0" text="Por Nacimiento" />
+      <Button layoutX="390.0" layoutY="100.0" mnemonicParsing="false" onAction="#insertar" text="Insertar">
+         <effect>
+            <SepiaTone />
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>
