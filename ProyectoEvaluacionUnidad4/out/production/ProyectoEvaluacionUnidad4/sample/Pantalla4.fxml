@@ -46,7 +46,7 @@
                         <Insets left="25.0" top="10.0" />
                      </HBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" styleClass="buttonEmpleo" text="Mas Antiguos" textFill="#fffefe">
+                  <Button mnemonicParsing="false" onAction="#Antiguo" styleClass="buttonEmpleo" text="Mas Antiguos" textFill="#fffefe">
                      <HBox.margin>
                         <Insets left="20.0" top="10.0" />
                      </HBox.margin>
@@ -56,6 +56,11 @@
                   <Insets />
                </VBox.margin>
             </HBox>
+            <Button mnemonicParsing="false" onAction="#volver" styleClass="buttonEmpleo" text="Volver" textFill="#fffbfb">
+               <VBox.margin>
+                  <Insets left="25.0" top="10.0" />
+               </VBox.margin>
+            </Button>
          </children>
          <BorderPane.margin>
             <Insets left="20.0" />
@@ -80,12 +85,12 @@
             </TableView>
             <HBox prefHeight="37.0" prefWidth="249.0">
                <children>
-                  <Button mnemonicParsing="false" styleClass="buttonEmpleo" text="Mas Recientes" textFill="#fff9f9">
+                  <Button mnemonicParsing="false" onAction="#Reciente" styleClass="buttonEmpleo" text="Mas Recientes" textFill="#fff9f9">
                      <HBox.margin>
                         <Insets left="25.0" top="10.0" />
                      </HBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" styleClass="buttonEmpleo" text="Mas Antiguos" textFill="WHITE">
+                  <Button mnemonicParsing="false" onAction="#Antiguo2" styleClass="buttonEmpleo" text="Mas Antiguos" textFill="WHITE">
                      <HBox.margin>
                         <Insets left="20.0" top="10.0" />
                      </HBox.margin>

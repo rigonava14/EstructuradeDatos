@@ -14,6 +14,7 @@ import javafx.util.converter.IntegerStringConverter;
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Stack;
 import java.util.function.UnaryOperator;
 
 public class ControllerSegundo{
@@ -22,18 +23,14 @@ public class ControllerSegundo{
     @FXML  ComboBox cmbPuesto;
     @FXML  ComboBox cmbJornada;
     @FXML  ComboBox cmbAños;
-    @FXML TableView tabla1;
 
     LinkedList<String> listaPuestos = new LinkedList<>();
 LinkedList<String> listaJornada = new LinkedList<>();
 LinkedList<String> listaAnios = new LinkedList<>();
-    TableColumn columnNombre= new TableColumn("NOMBRE");
-    TableColumn columnPuesto= new TableColumn("PUESTO");
-    TableColumn columnJornada= new TableColumn("JORNADA");
-    TableColumn columnAños= new TableColumn("EXPERIENCIA");
-    TableColumn columnNumero= new TableColumn("NUM CONTACTO");
+
     public static ObservableList<Buscar> listaBuscar = FXCollections.observableArrayList();
-    Queue<Buscar2> cola = new LinkedList<>();
+     public static Stack<Buscar2> pila = new Stack<>();
+     public static Queue<Buscar2> cola = new LinkedList<>();
 @FXML protected  void initialize(){
     listaPuestos.add("Contador Publico");
     listaPuestos.add("Ingeniero en sistemas");
@@ -61,15 +58,6 @@ LinkedList<String> listaAnios = new LinkedList<>();
     listaAnios.add("Mas de 10 años");
 
     for (int x=0;x<listaAnios.size();x++ ) cmbAños.getItems().add(listaAnios.get(x));
-
-    columnNombre.setCellValueFactory(new PropertyValueFactory<Buscar,String>("Nombre"));
-    columnPuesto.setCellValueFactory(new PropertyValueFactory<Buscar,String>("Puesto"));
-    columnJornada.setCellValueFactory(new PropertyValueFactory<Buscar,String>("Jornada"));
-    columnAños.setCellValueFactory(new PropertyValueFactory<Buscar,String>("Años"));
-    columnNumero.setCellValueFactory(new PropertyValueFactory<Buscar,String>("Numero"));
-
-    tabla1.getColumns().addAll(columnNombre,columnPuesto,columnJornada,columnAños,columnNumero);
-    tabla1.setItems(listaBuscar);
 }
 
     public void volver(ActionEvent event) {
@@ -98,24 +86,42 @@ LinkedList<String> listaAnios = new LinkedList<>();
             String años = cmbAños.getSelectionModel().getSelectedItem().toString();
 
             listaBuscar.add(new Buscar(nombre,puesto,jornada,años,numero));
+            String[][] items = new String[listaBuscar.size()][5];
+            for (int x=0;x<listaBuscar.size();x++){
+                items[x][0] = listaBuscar.get(x).getNombre();
+                items[x][1] = listaBuscar.get(x).getPuesto();
+                items[x][2] = listaBuscar.get(x).getJornada();
+                items[x][3] = listaBuscar.get(x).getAños();
+                items[x][4] = listaBuscar.get(x).getNumero();
+            }
+            Buscar2 buscar2 = new Buscar2(items,nombre,puesto,jornada,años,numero);
+            pila.add(buscar2);
+            cola.add(buscar2);
+
+
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setContentText("La informacion ha sido ingresada correctamente");
+            alert.show();
+
+            cmbPuesto.getSelectionModel().clearSelection();
+            cmbJornada.getSelectionModel().clearSelection();
+            cmbAños.getSelectionModel().clearSelection();
+            txtNum.setText("");
+            txtNombre.setText("");
 
         }
 
     }
 
-    public void reciente(ActionEvent event){
-    String[][] items = new String[listaBuscar.size()][5];
-    for (int x=0;x<listaBuscar.size();x++){
-    items[x][0] = listaBuscar.get(x).getNombre();
-    items[x][1] = listaBuscar.get(x).getPuesto();
-    items[x][2] = listaBuscar.get(x).getJornada();
-    items[x][3] = listaBuscar.get(x).getAños();
-    items[x][4] = listaBuscar.get(x).getNumero();
-    }
-    Buscar2 buscar2 = new Buscar2(items);
-    cola.add(buscar2);
-    Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.show();
+
+    public void empleos(ActionEvent event){
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("Pantalla4.fxml"));
+            Scene scene = new Scene(root);
+            Main.stage.setScene(scene);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }//Llave class

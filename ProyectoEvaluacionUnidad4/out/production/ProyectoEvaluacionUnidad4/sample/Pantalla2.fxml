@@ -4,7 +4,6 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
@@ -12,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" stylesheets="@estilos.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerSegundo">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" stylesheets="@estilos.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerSegundo">
    <top>
       <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" styleClass="cabecera" BorderPane.alignment="CENTER">
          <children>
@@ -62,19 +61,32 @@
                   <Insets bottom="20.0" right="20.0" top="20.0" />
                </VBox.margin>
             </ComboBox>
+            <Label text="Label" visible="false">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </Label>
             <Button mnemonicParsing="false" onAction="#Postular" prefHeight="25.0" prefWidth="204.0" styleClass="buttonEmpleo" text="Postular" textFill="#fffdfd">
                <VBox.margin>
-                  <Insets bottom="50.0" right="20.0" top="40.0" />
+                  <Insets right="20.0" />
                </VBox.margin>
                <font>
                   <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#empleos" styleClass="buttonEmpleo" text="Ir a lista de empleos" textFill="WHITE">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
                </font>
             </Button>
          </children>
       </VBox>
    </right>
    <center>
-      <VBox prefHeight="385.0" prefWidth="278.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="301.0" prefWidth="233.0" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets bottom="15.0" left="30.0" right="30.0" />
          </BorderPane.margin>
@@ -89,7 +101,7 @@
             </Label>
             <TextField fx:id="txtNombre" styleClass="textField">
                <VBox.margin>
-                  <Insets bottom="20.0" right="100.0" top="20.0" />
+                  <Insets bottom="20.0" top="20.0" />
                </VBox.margin>
             </TextField>
             <Label text="Numero telefonico:">
@@ -102,7 +114,7 @@
             </Label>
             <TextField fx:id="txtNum" promptText="Nombre" styleClass="textField">
                <VBox.margin>
-                  <Insets bottom="20.0" right="100.0" top="20.0" />
+                  <Insets bottom="20.0" top="20.0" />
                </VBox.margin>
             </TextField>
             <Label text="Años de experiencia">
@@ -125,29 +137,4 @@
          </children>
       </VBox>
    </center>
-   <left>
-      <VBox prefHeight="400.0" prefWidth="406.0" BorderPane.alignment="CENTER">
-         <children>
-            <TableView fx:id="tabla1" prefHeight="294.0" prefWidth="386.0">
-               <VBox.margin>
-                  <Insets left="20.0" top="10.0" />
-               </VBox.margin>
-            </TableView>
-            <HBox prefHeight="100.0" prefWidth="200.0">
-               <children>
-                  <Button mnemonicParsing="false" onAction="#reciente" styleClass="buttonEmpleo" text="Mas Recientes" textFill="WHITE">
-                     <HBox.margin>
-                        <Insets left="20.0" top="20.0" />
-                     </HBox.margin>
-                  </Button>
-                  <Button mnemonicParsing="false" styleClass="buttonEmpleo" text="Mas Antiguos" textFill="WHITE">
-                     <HBox.margin>
-                        <Insets left="20.0" top="20.0" />
-                     </HBox.margin>
-                  </Button>
-               </children>
-            </HBox>
-         </children>
-      </VBox>
-   </left>
 </BorderPane>

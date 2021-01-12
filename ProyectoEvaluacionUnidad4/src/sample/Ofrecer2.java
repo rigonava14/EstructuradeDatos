@@ -1,16 +1,14 @@
 package sample;
 
-public class Buscar2 {
-    String[][]datos;
-    private String Nombre;
+public class Ofrecer2 {
+    String[][] datos;
     private String Puesto;
     private String Jornada;
     private String Años;
     private String Numero;
 
-    public Buscar2(String[][] datos, String nombre, String puesto, String jornada, String años, String numero) {
+    public Ofrecer2(String[][] datos, String puesto, String jornada, String años, String numero) {
         this.datos = datos;
-        Nombre = nombre;
         Puesto = puesto;
         Jornada = jornada;
         Años = años;
@@ -23,14 +21,6 @@ public class Buscar2 {
 
     public void setDatos(String[][] datos) {
         this.datos = datos;
-    }
-
-    public String getNombre() {
-        return Nombre;
-    }
-
-    public void setNombre(String nombre) {
-        Nombre = nombre;
     }
 
     public String getPuesto() {
@@ -64,6 +54,5 @@ public class Buscar2 {
     public void setNumero(String numero) {
         Numero = numero;
     }
-
-
 }
+

@@ -102,6 +102,11 @@
                   <Font name="System Bold Italic" size="12.0" />
                </font>
             </Button>
+            <Button mnemonicParsing="false" onAction="#empleos" styleClass="buttonEmpleo" text="Ir a lista de empleos" textFill="WHITE">
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+            </Button>
          </children>
       </VBox>
    </right>
