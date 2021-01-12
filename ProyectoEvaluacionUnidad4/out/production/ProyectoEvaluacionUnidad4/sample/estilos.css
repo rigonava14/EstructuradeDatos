@@ -1,0 +1,27 @@
+.fondo{
+-fx-background-image: url("./img/fondo.jpg");
+-fx-background-size: cover;
+}
+.buttonIngresar{
+ -fx-background-color: #A4A9AA;
+ -fx-background-radius: 50px;
+ }
+ .buttonEmpleo{
+ -fx-background-color: #0E97B8;
+ -fx-background-radius: 50px;
+ }
+ .cabecera{
+ -fx-background-color: #363A3B;
+
+ }
+ .bottom{
+ -fx-background-color: #0E97B8;
+
+ }
+ .textField{
+ -fx-background-color: #A4A9AA;
+ -fx-background-radius: 15px;
+ -fx-text-inner-color: #F3F8F9
+;
+
+ }

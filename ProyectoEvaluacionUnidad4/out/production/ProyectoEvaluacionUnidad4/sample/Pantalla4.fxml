@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="600.0" prefWidth="1000.0" stylesheets="@estilos.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerCuarto">
+   <top>
+      <HBox prefHeight="104.0" prefWidth="600.0" styleClass="cabecera" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Lista de empleos" textFill="#dad1d1">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="20.0" top="10.0" />
+               </HBox.margin></Label>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox prefHeight="396.0" prefWidth="479.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Personas en busca de empleo">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tabla1" prefHeight="272.0" prefWidth="181.0">
+               <VBox.margin>
+                  <Insets right="20.0" />
+               </VBox.margin>
+            </TableView>
+            <HBox prefHeight="39.0" prefWidth="417.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#Mostrar" styleClass="buttonEmpleo" text="Mas Recientes" textFill="#fff4f4">
+                     <HBox.margin>
+                        <Insets left="25.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" styleClass="buttonEmpleo" text="Mas Antiguos" textFill="#fffefe">
+                     <HBox.margin>
+                        <Insets left="20.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets left="20.0" />
+         </BorderPane.margin>
+      </VBox>
+   </left>
+   <right>
+      <VBox prefHeight="396.0" prefWidth="501.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Empleos disponibles">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="20.0" top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tabla2" prefHeight="272.0" prefWidth="249.0">
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </VBox.margin>
+            </TableView>
+            <HBox prefHeight="37.0" prefWidth="249.0">
+               <children>
+                  <Button mnemonicParsing="false" styleClass="buttonEmpleo" text="Mas Recientes" textFill="#fff9f9">
+                     <HBox.margin>
+                        <Insets left="25.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" styleClass="buttonEmpleo" text="Mas Antiguos" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="20.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </right>
+   <bottom>
+      <HBox prefHeight="100.0" prefWidth="200.0" styleClass="bottom" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>

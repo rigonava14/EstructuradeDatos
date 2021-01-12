@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="500.0" prefWidth="500.0" stylesheets="@estilos.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerTercero">
+   <top>
+      <HBox prefHeight="100.0" prefWidth="200.0" styleClass="cabecera" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Ofrecer Empleo" textFill="#f5f0f0">
+               <font>
+                  <Font name="System Bold" size="31.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="300.0" prefWidth="247.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Puesto, carrera u oficio">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cmbPuesto" maxWidth="1.7976931348623157E308" prefWidth="150.0" styleClass="textField">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" />
+               </VBox.margin>
+            </ComboBox>
+            <Label text="Numero de contacto">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtNum" styleClass="textField">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" />
+               </VBox.margin>
+            </TextField>
+            <Button mnemonicParsing="false" onAction="#volver" styleClass="buttonIngresar" text="Volver">
+               <VBox.margin>
+                  <Insets left="20.0" top="35.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <right>
+      <VBox prefHeight="400.0" prefWidth="251.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Años de experiencia">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cmbAños" maxWidth="1.7976931348623157E308" prefWidth="150.0" styleClass="textField">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" />
+               </VBox.margin>
+            </ComboBox>
+            <Label text="Jornada">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cmbJornada" maxWidth="1.7976931348623157E308" prefWidth="150.0" styleClass="textField">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" />
+               </VBox.margin>
+            </ComboBox>
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ingresar" styleClass="buttonEmpleo" text="Ingresar" textFill="#f8f6f6">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="35.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </right>
+   <bottom>
+      <HBox prefHeight="100.0" prefWidth="200.0" styleClass="bottom" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>
