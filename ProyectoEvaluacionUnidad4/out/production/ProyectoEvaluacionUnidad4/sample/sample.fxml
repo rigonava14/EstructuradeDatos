@@ -3,11 +3,45 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" styleClass="fondo" stylesheets="@estilos.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
+      <HBox alignment="CENTER" prefHeight="67.0" prefWidth="500.0">
+         <children>
+            <Pane prefHeight="67.0" prefWidth="328.0" />
+            <VBox>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+               <children>
+                  <Label fx:id="txtNum" text="NUM">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="txtUsuario" text="Usuario">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <ImageView fitHeight="64.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/Profile.png" />
+               </image>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </ImageView>
+         </children>
+      </HBox>
       <Label alignment="TOP_CENTER" contentDisplay="TOP" text="Bolsa De Trabajo" textFill="#f3f8f9">
          <VBox.margin>
             <Insets bottom="20.0" top="30.0" />

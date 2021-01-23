@@ -31,8 +31,21 @@ LinkedList<String> listaAnios = new LinkedList<>();
     public static ObservableList<Buscar> listaBuscar = FXCollections.observableArrayList();
      public static Stack<Buscar2> pila = new Stack<>();
      public static Queue<Buscar2> cola = new LinkedList<>();
-@FXML protected  void initialize(){
-    listaPuestos.add("Contador Publico");
+     String[][] puestos= {
+             {"Contador Publico","15000"},
+             {"Ingeniero en sistemas","20000"},
+             {"Ingeniero civil","25000"},
+             {"Ingeniero electromecanico","30000"},
+             {"Ingeniero mecatronico","29000"},
+             {"Dentista","10000"},
+             {"Enfermero/a","34000"},
+             {"Albañil","7000"},
+             {"Personal de limpieza","1500"},
+             {"Ayudante de cocina","1550"},
+             {"Mesero","1300"},
+             };
+             @FXML protected  void initialize(){
+    /*listaPuestos.add("Contador Publico");
     listaPuestos.add("Ingeniero en sistemas");
     listaPuestos.add("Ingeniero civil");
     listaPuestos.add("Ingeniero electromecanico");
@@ -42,7 +55,10 @@ LinkedList<String> listaAnios = new LinkedList<>();
     listaPuestos.add("Albañil");
     listaPuestos.add("Personal de limpieza");
     listaPuestos.add("Ayudante de cocina");
-    listaPuestos.add("Mesero");
+    listaPuestos.add("Mesero");*/
+    for (int x=0;x<puestos.length;x++){
+        listaPuestos.add(puestos[x][0]);
+    }
 
     for (int x = 0; x <listaPuestos.size(); x++) cmbPuesto.getItems().add(listaPuestos.get(x));
 
@@ -122,6 +138,16 @@ LinkedList<String> listaAnios = new LinkedList<>();
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+    public void ordenar(ActionEvent event){
+                 Ordenamiento ordenamiento=new Ordenamiento();
+                 listaPuestos.clear();
+                 cmbPuesto.getItems().clear();
+                 String[][] ordenado=ordenamiento.burbuja(puestos);
+                 for (int x=0;x<ordenado.length;x++){
+                     listaPuestos.add(ordenado[x][0]);
+                     cmbPuesto.getItems().add(ordenado[x][0]);
+                 }
     }
 
 }//Llave class

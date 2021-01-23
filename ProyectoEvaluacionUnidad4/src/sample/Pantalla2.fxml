@@ -45,9 +45,10 @@
             </Label>
             <ComboBox fx:id="cmbPuesto" prefHeight="25.0" prefWidth="203.0" styleClass="textField">
                <VBox.margin>
-                  <Insets bottom="20.0" right="20.0" top="20.0" />
+                  <Insets bottom="10.0" right="20.0" top="20.0" />
                </VBox.margin>
             </ComboBox>
+            <Button mnemonicParsing="false" onAction="#ordenar" styleClass="buttonEmpleo" text="Ordenar X Salario" />
             <Label text="Jornada">
                <VBox.margin>
                   <Insets />
@@ -58,7 +59,7 @@
             </Label>
             <ComboBox fx:id="cmbJornada" prefHeight="25.0" prefWidth="203.0" styleClass="textField">
                <VBox.margin>
-                  <Insets bottom="20.0" right="20.0" top="20.0" />
+                  <Insets right="20.0" top="20.0" />
                </VBox.margin>
             </ComboBox>
             <Label text="Label" visible="false">
